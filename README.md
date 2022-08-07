@@ -17,7 +17,6 @@ Role Variables
 | Variable                     | Type | Description                                                        | Default                      |
 |------------------------------|------|--------------------------------------------------------------------|------------------------------|
 | hcloud_firewall_api_token_rw | str  | Read-write Hetzner Cloud api token                                 | -                            |
-| hcloud_firewall_api_token_ro | str  | Read-only Hetzner Cloud api token, defaults to rw-token if not set | hcloud_firewall_api_token_rw |
 
 **Firewall defining variables**
 
@@ -58,7 +57,6 @@ Example Playbook
       - name: hcloud_firewall
         vars:
           hcloud_firewall_api_token_rw: "{{ vault_hcloud_token_rw }}"
-          hcloud_networks_api_token_ro: "{{ vault_hcloud_token_ro }}"
           hcloud_firewall_firewalls:
             - name: my-firewall-01
               state: present

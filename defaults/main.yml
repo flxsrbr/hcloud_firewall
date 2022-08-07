@@ -3,7 +3,6 @@
 
 # api token(s), optional rw-ro separation
 hcloud_firewall_api_token_rw: "secret"
-hcloud_networks_api_token_ro: "{{ hcloud_firewall_api_token_rw }}"
 
 # firewall definitions
 hcloud_firewall_firewalls: []
