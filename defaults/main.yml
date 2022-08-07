@@ -1,0 +1,41 @@
+---
+# defaults file for hcloud_firewall
+
+# api token(s), optional rw-ro separation
+hcloud_firewall_api_token_rw: "secret"
+hcloud_networks_api_token_ro: "{{ hcloud_firewall_api_token_rw }}"
+
+# firewall definitions
+hcloud_firewall_firewalls: []
+
+  # - name: firewall-ext-01
+  #   state: present
+  #   rules:
+
+  #     - description: ssh
+  #       direction: in
+  #       protocol: tcp
+  #       port: 22
+  #       source_ips:
+  #         - 0.0.0.0/0
+  #         - ::/0
+  #     - description: icmp
+  #       direction: in
+  #       protocol: icmp
+  #       source_ips:
+  #         - 0.0.0.0/0
+  #         - ::/0
+  #     - description: http
+  #       direction: in
+  #       protocol: tcp
+  #       port: 80
+  #       source_ips:
+  #         - 0.0.0.0/0
+  #         - ::/0
+  #     - description: https
+  #       direction: in
+  #       protocol: tcp
+  #       port: 443
+  #       source_ips:
+  #         - 0.0.0.0/0
+  #         - ::/0

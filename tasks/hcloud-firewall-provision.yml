@@ -1,0 +1,16 @@
+---
+- name: "Ensure Hetzner Cloud firewalls are present."
+  hetzner.hcloud.hcloud_firewall:
+    api_token: "{{ hcloud_firewall_api_token_rw }}"
+    name: "{{ fw.name }}"
+    rules:  "{{ fw.rules }}"
+    state: "{{ fw.state }}"
+  loop: "{{ hetzner_firewalls }}"
+  loop_control:
+    loop_var: fw
+    label: "{{ fw.name }}"
+  register: register_firewall_creation
+
+- name: "Debug firewall creation."
+  debug:
+    var: register_firewall_creation

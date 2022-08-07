@@ -1,0 +1,15 @@
+galaxy_info:
+  author: flxsrbr
+  namespace: flxsrbr
+  role_name: hcloud_firewall
+  description: Role to provision firewalls on Hetzner Cloud.
+  license: BSD-3-Clause
+  min_ansible_version: 2.13
+  github_branch: main
+  galaxy_tags:
+    - cloud
+    - hetzner
+    - hcloud
+    - provision
+    - firewall
+  dependencies: []

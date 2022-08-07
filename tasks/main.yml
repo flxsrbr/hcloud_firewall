@@ -1,0 +1,6 @@
+---
+# tasks file for hcloud_firewall
+
+- import_tasks: hcloud-firewall-provision.yml
+  tags:
+    - provision
